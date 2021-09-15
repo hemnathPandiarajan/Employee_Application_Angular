@@ -1,0 +1,20 @@
+<div class="container my-5">
+<table mdbTable bordered="true">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let employee of employees;let i=index;">
+        <th scope="row">{{i+1}}</th>
+        <td>{{employee.name}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.salary}}</td>
+        <td>{{employee.mobile}}</td>
+        <td><button (click)="goToEmployeeDetail(employee.id)" mdbBtn color="success" mdbWavesEffect>View</button></td>
+        <td><button (click)="deleteEmployee(employee.id)" mdbBtn color="danger" mdbWavesEffect>Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,24 @@
+<div class="container my-5">
+    <div class="d-flex justify-content-center">
+       <!-- Default form login -->
+<form [formGroup]="updateEmployeeForm" (ngSubmit)="onSubmit()" class="text-center border border-light p-5" >
+
+    <p class="h4 mb-4">Edit Employee in</p>
+  
+    <!-- Email -->
+    <input type="name" id="name" class="form-control mb-4" value="{{employee.name}}" placeholder="Employee name" formControlName="name">
+  
+    <!-- Password -->
+    <input type="email" id="email" class="form-control mb-4" value="{{employee.email}}" placeholder="E-mail" formControlName="email">
+
+    <input type="text" id="salary" class="form-control mb-4" value="{{employee.salary}}" placeholder="Salary"  formControlName="salary">
+
+    <input type="text" id="mobile" class="form-control mb-4" value="{{employee.mobile}}" placeholder="Mobile"  formControlName="mobile">
+  
+    <!-- Sign in button -->
+    <button mdbBtn color="info" block="true" class="my-4" type="submit">Submit</button>
+
+  </form>
+  <!-- Default form login -->
+    </div>
+</div>
